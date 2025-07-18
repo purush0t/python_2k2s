@@ -1,0 +1,57 @@
+import os
+import re
+import shutil
+#folder path to execute the program
+wrk_path = "C:/Users/BIRYANI_31/Desktop/2024_kode/new_folder/"
+
+#changin current working directory
+os.chdir(wrk_path)
+
+# file_names = os.listdir()
+
+print(os.system("DIR"))
+
+# filtering out only the files, exculding folder and other stuff
+f_names = [name for name in os.listdir() if os.path.isfile(name)]
+
+# removing item's that start with "."
+f_names = [x for x in f_names if not x.startswith(".")]
+ext = list()
+
+#extracting the extension of all the files
+for r in f_names:
+    ext.append(r.split(".")[1])
+#removing duplicate extension
+ext = list(set(ext))
+
+#making directories in name of extension
+for g in ext:
+    print(f"making directory name:{g}")
+    os.mkdir(g)
+    
+for r_n in f_names:
+    for ex_t in ext:
+        if r_n.split(".")[1] == ex_t:
+            print("moving {} to {}".format(r_n,os.getcwd()+"\\{}".format(ex_t)))
+            shutil.move(os.getcwd()+"\\{}".format(r_n),os.getcwd()+"\\{}".format(ex_t))
+        else:
+            continue
+
+print("everthing is done eh!")
+
+    # try:
+    #     print(f"making a new directory:{wrk_path+"/"+split_p[1]}")
+    #     os.makedirs(wrk_path+split_p[1],exist_ok=True)
+    # except OSError:
+    #     print(f"printing_error:{OSError}")    
+    #     print("directory already exists")
+    # shutil.move(wrk_path+"/"+temp,wrk_path+"/"+split_p[1])
+    # print(wrk_path+"/"+split_p[0]+split_p[1])
+    
+    # print(temp)
+    # print(wrk_path+"/"+temp)
+    # print(wrk_path+split_p[1]+"/"+temp)
+    # # # if :
+    # print(type(t),type(temp))
+    # os.rename(temp,str(t)+".txt")
+    # print(f"changed {t}",end="\r")
