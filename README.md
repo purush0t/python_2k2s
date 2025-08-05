@@ -1,0 +1,10 @@
+_..\00/.._
+
+# Python script for sorting files inside a folder based on it's extension
+
+## set working directory to where, the files has to be sorted
+
+`wrk_path = ""path/to/the/folder/where/you/want/to/sort/the/files`
+
+## Run Script! to sort files.
+--------------------------------------------------------------------------
