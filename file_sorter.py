@@ -3,7 +3,7 @@ import re
 import shutil
 import sys
 #folder path to execute the program
-wrk_path = "C:/Users/BIRYANI_31/Desktop/2024_kode/new_folder/"
+wrk_path = "path/to/the/folder/where/you/want/to/sort/the/files"
 
 #changin current working directory
 os.chdir(wrk_path)
@@ -52,19 +52,3 @@ for r_n in f_names:
 
 print("everthing is done eh!")
 
-    # try:
-    #     print(f"making a new directory:{wrk_path+"/"+split_p[1]}")
-    #     os.makedirs(wrk_path+split_p[1],exist_ok=True)
-    # except OSError:
-    #     print(f"printing_error:{OSError}")    
-    #     print("directory already exists")
-    # shutil.move(wrk_path+"/"+temp,wrk_path+"/"+split_p[1])
-    # print(wrk_path+"/"+split_p[0]+split_p[1])
-    
-    # print(temp)
-    # print(wrk_path+"/"+temp)
-    # print(wrk_path+split_p[1]+"/"+temp)
-    # # # if :
-    # print(type(t),type(temp))
-    # os.rename(temp,str(t)+".txt")
-    # print(f"changed {t}",end="\r")
